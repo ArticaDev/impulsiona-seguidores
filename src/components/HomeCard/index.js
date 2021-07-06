@@ -205,7 +205,7 @@ const HomeCard = ({ className }) => {
                             <div>
                                 <div className="flex flex-col justify-center items-center">
                                     <h4 className="text-link">
-                                        {products[2].likes[valor.x] + " curtidas por mês"}
+                                        {products[2].likes[valor.x] + " curtidas por post"}
                                     </h4>
                                     <Slider
                                         className="mt-10"

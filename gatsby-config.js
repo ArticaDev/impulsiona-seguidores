@@ -25,6 +25,20 @@ module.exports = {
             includedRoutes: [
                 "**/paginas"
             ],
+        },
+        {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+              pixelId: process.env.FACEBOOK_PIXEL_ID,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-hotjar-tracking`,
+            options: {
+              includeInDevelopment: false,
+              id: process.env.HOTJAR_TRACKING_ID,
+              sv: process.env.HOTJAR_VERSION
+            }
         }
     ],
 };

@@ -30,6 +30,17 @@ const Header = ({ className }) => {
                 <meta charSet="utf-8" />
                 <title>Impulsiona Seguidores</title>
                 <link rel="shortcut icon" href={icon} />
+
+                <!-- Global site tag (gtag.js) - Google Ads: 618437408 -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-618437408"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'AW-618437408');
+                </script>
+
             </Helmet>
             <nav className="h-20 bg-black sticky top-0 z-10">
                 <div className="container-fluid h-full flex items-center ">

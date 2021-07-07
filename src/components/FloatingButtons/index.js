@@ -24,7 +24,7 @@ const FloatingButtons = ({ className }) => {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://web.whatsapp.com/send?phone=5544998433415&text="
+                href="https://api.whatsapp.com/send?phone=5534996634683&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20site%20Impulsiona%20Seguidores!"
               >
                 <WhatsappFill
                   className="mr-16 rounded-full bg-white"

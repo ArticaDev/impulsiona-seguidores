@@ -4,6 +4,7 @@ import style from "./styles";
 import Advantages from "../Advantages"
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import qs from "qs";
 
 const HomeCard = ({ className }) => {
 
@@ -13,10 +14,9 @@ const HomeCard = ({ className }) => {
        data['api_action'] = 'contact_sync';
        data['api_key'] = process.env.GATSBY_ACTIVE_CAMPAIGN_KEY;
        const url = 'https://fluxodigital12.api-us1.com/admin/api.php';
-       axios.post(url, {},
-            {params: data},
-            {headers: { 'Content-Type': 'application/x-www-form-urlencoded', "Access-Control-Allow-Origin": "*" }});
-      window.location.replace(products[products[0].titles.indexOf(chosenTitle)].links[valor.x]);
+       axios.post(url, qs.stringify(data)).then((response) => { console.log(response.data);})
+        .catch((error) => { console.log(error); });
+       window.location.replace(products[products[0].titles.indexOf(chosenTitle)].links[valor.x]);
 
       };
     const [valor, setState] = useState({ x: 0 });

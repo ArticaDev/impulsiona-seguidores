@@ -9,11 +9,16 @@ module.exports = {
     plugins: [
         "gatsby-plugin-react-helmet",
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingId: process.env.GOOGLE_ANALYTICS_ID,
+              trackingIds: [
+                process.env.GOOGLE_ANALYTICS_ID, 
+                process.env.GOOGLE_ADS_ID, 
+              ],
+              pluginConfig: {
                 head: true
-            }
+              },
+            },
         },
         `gatsby-plugin-emotion`,
         'gatsby-plugin-postcss',

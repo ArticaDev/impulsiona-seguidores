@@ -13,6 +13,7 @@ const HomeCard = ({ className }) => {
 
        data['api_action'] = 'contact_sync';
        data['api_key'] = process.env.GATSBY_ACTIVE_CAMPAIGN_KEY;
+       data['listid'] = 9;
        const url = 'https://fluxodigital12.api-us1.com/admin/api.php';
        axios.post(url, qs.stringify(data)).then((response) => { console.log(response.data);})
         .catch((error) => { console.log(error); });

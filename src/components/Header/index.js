@@ -28,7 +28,7 @@ const Header = ({ className }) => {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Impulsiona Seguidores - Perfis Reais e Brasileiros Instagram</title>
+                <title>ImpulsionaSeguidores - Seguidores Reais e Brasileiros Instagram</title>
                 <link rel="shortcut icon" href={icon} />
             </Helmet>
             <nav className="h-20 bg-black sticky top-0 z-10">

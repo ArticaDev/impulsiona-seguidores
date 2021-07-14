@@ -35,11 +35,20 @@ const Header = ({ className, pageUrl }) => {
             <nav className="h-20 bg-black sticky top-0 z-10 hidden lg:block">
                 <div className="container-fluid h-full flex items-center ">
                     <div className="ml-5 w-1/5">
+                    {(pageUrl.includes("blog")) &&
+                        <a href="/" activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                            <button className="hidden lg:block">
+                                <img alt="logo" style={{height: "3.5rem"}}  className="h-14" src={logo_desk}></img>
+                            </button>
+                        </a>
+                        }
+                    {!(pageUrl.includes("blog")) &&
                         <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                             <button className="hidden lg:block">
                                 <img alt="logo" style={{height: "3.5rem"}}  className="h-14" src={logo_desk}></img>
                             </button>
                         </Link>
+                        }
                     </div>
                     <div className={"flex flex-row w-3/5 justify-around mx-auto " + className}>
                         {(pageUrl.includes("blog")) &&
@@ -71,11 +80,18 @@ const Header = ({ className, pageUrl }) => {
             <nav className="h-20 bg-black sticky top-0 z-10 lg:hidden">
                 <div className="container-fluid h-full flex items-center ">
                     <div className="ml-5 w-1/5">
+                    {(pageUrl.includes("blog")) &&
+                        <a href="/" activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <button className="lg:hidden">
+                                <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
+                            </button>
+                        </a>}
+                    {!(pageUrl.includes("blog")) &&
                         <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                         <button className="lg:hidden">
                                 <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
                             </button>
-                        </Link>
+                        </Link>}
                     </div>
                     <div className={"flex flex-row w-4/5 justify-end mx-auto " + className}>
                     <button className="mr-5 lg:hidden" onClick={() => setshowMenu(!showMenu)}>

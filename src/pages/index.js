@@ -9,12 +9,12 @@ import SectionBenefits from '../components/SectionBenefits'
 import SectionHome from '../components/SectionHome'
 import FloatingButtons from '../components/FloatingButtons'
 
-export default function Index() {
-
+export default function Index({location}) {
+    const url = location.href ? location.href : '';
 
     return (
         <Layout>
-            <Header />
+            <Header pageUrl={url} />
             <FloatingButtons />
             <SectionHome />
             <SectionAbout />

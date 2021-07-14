@@ -3,12 +3,13 @@ import { graphql} from "gatsby"
 import Layout from "../components/Layout"
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import BlogCard from "../components/BlogCard"
+import BlogCard from "../components/Footer copy"
 
-export default function Blog({ data }) {
+export default function Blog({ data, location }) {
+  const url = location.href ? location.href : '';
   return (
     <Layout>
-      <Header/>
+      <Header pageUrl={url} />
       <div className="flex flex-col items-center">
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>

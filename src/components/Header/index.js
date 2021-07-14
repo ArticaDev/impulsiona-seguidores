@@ -10,7 +10,7 @@ import { useSpring, animated, useSpringRef, useChain } from 'react-spring'
 
 
 
-const Header = ({ className }) => {
+const Header = ({ className, pageUrl }) => {
     const [showMenu, setshowMenu] = useState(false);
 
     const springApi = useSpringRef();
@@ -42,12 +42,26 @@ const Header = ({ className }) => {
                         </Link>
                     </div>
                     <div className={"flex flex-row w-3/5 justify-around mx-auto " + className}>
+                        {(pageUrl.includes("blog")) &&
+                        <>
+                                <a activeClass="active" href="/" className=" items-center text-white hover:text-green text active:text-green "  >Inicio</a>
+                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text  active:text-green "  >Sobre Nós</a>
+                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
+                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green"  >Garantia</a>
+                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green " >Contato</a>
+                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                </>
+                                }
+                        {!(pageUrl.includes("blog")) &&
+                        <>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green text  active:text-green " to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green " to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
                                 <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                </>
+                                }
                     </div>
                         <div className="col hidden lg:flex w-1/5"></div>
                 </div>
@@ -70,13 +84,22 @@ const Header = ({ className }) => {
                     </div>
                     </div>
                 <animated.div className={`flex-col bg-black`} style={props}>
-                    {showMenu &&
+                    {showMenu && !(pageUrl.includes("blog")) &&
                         <>
                             <Link activeClass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
                             <Link activeClass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
                             <Link activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                             <Link activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
                             <Link activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
+                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                        </>}
+                    {showMenu && (pageUrl.includes("blog")) &&
+                        <>
+                            <a activeClass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</a>
+                            <a activeClass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</a>
+                            <a activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</a>
+                            <a activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</a>
+                            <a activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</a>
                             <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                 </animated.div>

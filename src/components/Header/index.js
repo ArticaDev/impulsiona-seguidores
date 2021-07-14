@@ -95,11 +95,11 @@ const Header = ({ className, pageUrl }) => {
                         </>}
                     {showMenu && (pageUrl.includes("blog")) &&
                         <>
-                            <a activeClass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</a>
-                            <a activeClass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</a>
-                            <a activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</a>
-                            <a activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</a>
-                            <a activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</a>
+                            <a activeClass="active" href="/" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" >Inicio</a>
+                            <a activeClass="active" href="/" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2"  >Sobre Nós</a>
+                            <a activeClass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
+                            <a activeClass="active" href="/" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" >Garantia</a>
+                            <a activeClass="active" href="/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" >Contato</a>
                             <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                 </animated.div>

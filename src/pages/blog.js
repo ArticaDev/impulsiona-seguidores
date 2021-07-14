@@ -3,7 +3,7 @@ import { graphql} from "gatsby"
 import Layout from "../components/Layout"
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import BlogCard from "../components/Footer copy"
+import BlogCard from "../components/BlogCard"
 
 export default function Blog({ data, location }) {
   const url = location.href ? location.href : '';

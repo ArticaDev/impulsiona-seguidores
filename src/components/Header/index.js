@@ -15,7 +15,7 @@ const Header = ({ className }) => {
 
     const springApi = useSpringRef();
 
-    let props = useSpring({ ref: springApi, from: { height: 0, opacity: 0 }, to: { height: showMenu ? 190 : 0, opacity: showMenu ? 1 : 0 } })
+    let props = useSpring({ ref: springApi, from: { height: 0, opacity: 0 }, to: { height: showMenu ? 220 : 0, opacity: showMenu ? 1 : 0 } })
 
     const transApi = useSpringRef();
 
@@ -31,36 +31,45 @@ const Header = ({ className }) => {
                 <title>ImpulsionaSeguidores - Seguidores Reais e Brasileiros Instagram</title>
                 <link rel="shortcut icon" href={icon} />
             </Helmet>
-            <nav className="h-20 bg-black sticky top-0 z-10">
+            {/* Desktop Navbar */}
+            <nav className="h-20 bg-black sticky top-0 z-10 hidden lg:block">
                 <div className="container-fluid h-full flex items-center ">
-                    <div className="ml-5">
+                    <div className="ml-5 w-1/5">
                         <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
-                            <button className="lg:hidden">
-                                <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
-                            </button>
                             <button className="hidden lg:block">
                                 <img alt="logo" style={{height: "3.5rem"}}  className="h-14" src={logo_desk}></img>
                             </button>
-
                         </Link>
                     </div>
-                    <div className="flex wrap w-full justify-end lg:justify-center">
-                        <button className="mr-5 lg:hidden" onClick={() => setshowMenu(!showMenu)}>
-                            <ThreeLineHorizontal color={"#00CD00"} size={40} />
-                        </button>
-                        <div className={className}>
-                            <div className="flex-row hidden lg:flex">
-                                <Link activeClass="active" className="flex items-center text-white hover:text-green text active:text-green mr-8" to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
-                                <Link activeClass="active" className="flex items-center text-white hover:text-green text  active:text-green mr-8" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
-                                <Link activeClass="active" className="flex items-center text-white hover:text-green text active:text-green mr-8" to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
-                                <Link activeClass="active" className="flex items-center text-white hover:text-green  text active:text-green mr-8" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
-                                <Link activeClass="active" className="flex items-center text-white hover:text-green  text active:text-green" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
-                            </div>
-                        </div>
-                        <div className="col hidden lg:flex w-56"></div>
+                    <div className={"flex flex-row w-3/5 justify-around mx-auto " + className}>
+                                <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
+                                <Link activeClass="active" className=" items-center text-white hover:text-green text  active:text-green " to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
+                                <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
+                                <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
+                                <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green " to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
+                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
                     </div>
+                        <div className="col hidden lg:flex w-1/5"></div>
                 </div>
-                <animated.div className={`flex-col bg-black lg:hidden`} style={props}>
+                </nav>
+
+            {/* Mobile Navbar */}
+            <nav className="h-20 bg-black sticky top-0 z-10 lg:hidden">
+                <div className="container-fluid h-full flex items-center ">
+                    <div className="ml-5 w-1/5">
+                        <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <button className="lg:hidden">
+                                <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
+                            </button>
+                        </Link>
+                    </div>
+                    <div className={"flex flex-row w-4/5 justify-end mx-auto " + className}>
+                    <button className="mr-5 lg:hidden" onClick={() => setshowMenu(!showMenu)}>
+                            <ThreeLineHorizontal color={"#00CD00"} size={40} />
+                    </button>      
+                    </div>
+                    </div>
+                <animated.div className={`flex-col bg-black`} style={props}>
                     {showMenu &&
                         <>
                             <Link activeClass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
@@ -68,9 +77,11 @@ const Header = ({ className }) => {
                             <Link activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                             <Link activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
                             <Link activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
+                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                 </animated.div>
-            </nav>
+                
+                </nav>
         </>)
 };
 

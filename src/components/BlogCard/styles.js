@@ -30,8 +30,12 @@ h2{
 }
 
 .text-card{
-    min-height: 150px;
+    min-height: 100px;
     max-width: 600px;
+}
+
+img{
+    width:40vw;
 }
 
 `;

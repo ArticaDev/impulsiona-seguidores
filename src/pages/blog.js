@@ -1,19 +1,22 @@
 import React from "react"
-import { Link, graphql } from "gatsby" 
+import { graphql} from "gatsby" 
 import Layout from "../components/Layout"
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import BlogCard from "../components/BlogCard"
 
 export default function Blog({ data }) {
   return (
     <Layout>
-      <h4>Posts</h4>
+      <Header/>
+      <div className="flex flex-col items-center">
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>
-          <Link to={node.slug}>
-            <p>{node.title}</p>
-          </Link>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      <BlogCard className="my-5" posttitle={node.title} posttext={node.excerpt} postimage={'/'} postlink={node.slug}/>
         </div>
       ))}
+      </div>
+      <Footer/>
     </Layout>
   )
 }

@@ -34,10 +34,6 @@ h2{
     max-width: 600px;
 }
 
-img{
-    width:40vw;
-}
-
 `;
 
 export default style;

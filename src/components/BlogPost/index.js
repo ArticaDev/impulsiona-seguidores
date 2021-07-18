@@ -4,6 +4,7 @@ import style from "./styles";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { graphql } from "gatsby";
+import FloatingButtons from '../../components/FloatingButtons'
 
 const BlogPost = ({ data, location, className }) => {
   const url = location.href ? location.href : "";
@@ -13,6 +14,7 @@ const BlogPost = ({ data, location, className }) => {
   return (
     <Layout>
       <Header pageUrl={url} />
+      <FloatingButtons />
       <div className={className}>
         <div className="container px-6 lg:px-20 mt-8">
           <img className="container h-80" src={thumbnailurl}></img>

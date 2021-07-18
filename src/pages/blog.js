@@ -4,13 +4,18 @@ import Layout from "../components/Layout"
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BlogCard from "../components/BlogCard"
+import SearchBar from "../components/SearchBar"
+import FloatingButtons from '../components/FloatingButtons'
 
 export default function Blog({ data, location }) {
   const url = location.href ? location.href : '';
   let thumbnailurl = "https://i.stack.imgur.com/y9DpT.jpg";
   return (
     <Layout>
+      <div className="bg-grey">
       <Header pageUrl={url} />
+      <FloatingButtons />
+      <SearchBar/>
       <div className="flex flex-col items-center mb-16">
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>
@@ -19,6 +24,7 @@ export default function Blog({ data, location }) {
       ))}
       </div>
       <Footer/>
+      </div>
     </Layout>
   )
 }

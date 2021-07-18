@@ -14,9 +14,9 @@ const BlogPost = ({ data, location, className }) => {
   return (
     <Layout>
       <Header pageUrl={url} />
-      <FloatingButtons />
+      <FloatingButtons  pageUrl={url} />
       <div className={className}>
-        <div className="container px-6 lg:px-20 mt-8">
+        <div className="container px-6 lg:px-20 mt-8 topo-blog">
           <img className="container h-80" src={thumbnailurl}></img>
 
           <h1 className="text-link text-4xl text-center mb-8 mt-5">

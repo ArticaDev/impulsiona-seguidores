@@ -3,7 +3,7 @@ import style from "./styles";
 import { WhatsappFill, ChevronUp } from "akar-icons";
 import { Link } from "react-scroll";
 
-const FloatingButtons = ({ className }) => {
+const FloatingButtons = ({ className, pageUrl }) => {
   let [initialClass, setInitialClass] = useState("hidden");
   useEffect(() => {
     window.onscroll = () => {
@@ -35,6 +35,7 @@ const FloatingButtons = ({ className }) => {
               </a>
             </button>
             <button>
+              {!(pageUrl.includes("blog")) &&
               <Link
                 to="home"
                 spy={true}
@@ -47,7 +48,21 @@ const FloatingButtons = ({ className }) => {
                   color={"#00CD00"}
                   size={40}
                 />
-              </Link>
+              </Link>}
+              {(pageUrl.includes("blog")) &&
+              <Link
+                to="topo-blog"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                <ChevronUp
+                  className={`rounded-full ${initialClass}`}
+                  color={"#00CD00"}
+                  size={40}
+                />
+              </Link>}
             </button>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function Index({location}) {
     return (
         <Layout>
             <Header pageUrl={url} />
-            <FloatingButtons />
+            <FloatingButtons pageUrl={url} />
             <SectionHome />
             <SectionAbout />
             <SectionBenefits />

@@ -12,9 +12,9 @@ export default function Blog({ data, location }) {
   let thumbnailurl = "https://i.stack.imgur.com/y9DpT.jpg";
   return (
     <Layout>
-      <div className="bg-grey">
+      <div className="bg-grey topo-blog">
       <Header pageUrl={url} />
-      <FloatingButtons />
+      <FloatingButtons pageUrl={url} />
       <SearchBar/>
       <div className="flex flex-col items-center mb-16">
       {data.allWpPost.nodes.map(node => (

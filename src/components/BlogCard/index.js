@@ -12,7 +12,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => (
           </div>
           <img className="container max-w-xl mx-auto h-40 px-5 mb-4" src={postthumb}></img>
           <div
-            className="text-sm px-8 text-card"
+            className="text-lg px-8 text-card"
             dangerouslySetInnerHTML={{ __html: posttext }}
           />
           <div className="flex justify-center mt-7">

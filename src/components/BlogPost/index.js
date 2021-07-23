@@ -23,7 +23,7 @@ const BlogPost = ({ data, location, className }) => {
             {post.title}
           </h1>
           <div
-            className="mb-8"
+            className="mb-8 text-xl"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>

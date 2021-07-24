@@ -10,7 +10,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => (
           <div className="bg-blue rounded-t-lg w-full h-20 mb-5 flex justify-center items-center">
             <h2 className="text-white card-title px-4">{posttitle}</h2>
           </div>
-          <img className="container max-w-xl mx-auto h-40 px-5 mb-4" src={postthumb}></img>
+          <img className="container max-w-xl mx-auto px-5 mb-4" src={postthumb}></img>
           <div
             className="text-lg px-8 text-card"
             dangerouslySetInnerHTML={{ __html: posttext }}

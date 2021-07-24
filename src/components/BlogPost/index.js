@@ -9,15 +9,13 @@ import FloatingButtons from '../../components/FloatingButtons'
 const BlogPost = ({ data, location, className }) => {
   const url = location.href ? location.href : "";
   const post = data.allWpPost.nodes[0];
-  let thumbnailurl = "https://i.stack.imgur.com/y9DpT.jpg";
-  console.log(post);
   return (
     <Layout>
       <Header pageUrl={url} />
       <FloatingButtons  pageUrl={url} />
       <div className={className}>
         <div className="container px-6 lg:px-20 mt-8 topo-blog">
-          <img className="container h-80" src={thumbnailurl}></img>
+          <img className="container h-80" src={post.featuredImage.node.mediaItemUrl}></img>
 
           <h1 className="text-link text-4xl text-center mb-8 mt-5">
             {post.title}
@@ -43,6 +41,11 @@ export const query = graphql`
       nodes {
         title
         content
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
       }
     }
   }

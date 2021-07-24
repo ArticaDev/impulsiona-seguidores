@@ -58,7 +58,7 @@ const Header = ({ className, pageUrl }) => {
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green"  >Garantia</a>
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green " >Contato</a>
-                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                {/* <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a> */}
                                 </>
                                 }
                         {!(pageUrl.includes("blog")) &&
@@ -68,7 +68,7 @@ const Header = ({ className, pageUrl }) => {
                                 <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
                                 <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green " to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
-                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                {/* <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a> */}
                                 </>
                                 }
                     </div>
@@ -107,7 +107,7 @@ const Header = ({ className, pageUrl }) => {
                             <Link activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                             <Link activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
                             <Link activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
-                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            {/* <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a> */}
                         </>}
                     {showMenu && (pageUrl.includes("blog")) &&
                         <>
@@ -116,7 +116,7 @@ const Header = ({ className, pageUrl }) => {
                             <a activeClass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
                             <a activeClass="active" href="/" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" >Garantia</a>
                             <a activeClass="active" href="/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" >Contato</a>
-                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            {/* <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a> */}
                         </>}
                 </animated.div>
                 

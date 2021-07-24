@@ -1,19 +1,29 @@
 import React from "react"
-import { Link, graphql } from "gatsby" 
+import { graphql} from "gatsby" 
 import Layout from "../components/Layout"
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import BlogCard from "../components/BlogCard"
+import SearchBar from "../components/SearchBar"
+import FloatingButtons from '../components/FloatingButtons'
 
-export default function Blog({ data }) {
+export default function Blog({ data, location }) {
+  const url = location.href ? location.href : '';
   return (
     <Layout>
-      <h4>Posts</h4>
+      <div className="bg-grey topo-blog">
+      <Header pageUrl={url} />
+      <FloatingButtons pageUrl={url} />
+      <SearchBar/>
+      <div className="flex flex-col items-center mb-16">
       {data.allWpPost.nodes.map(node => (
         <div key={node.slug}>
-          <Link to={node.slug}>
-            <p>{node.title}</p>
-          </Link>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      <BlogCard postthumb={node.featuredImage.node.mediaItemUrl}  className="my-5" posttitle={node.title} posttext={node.excerpt} postlink={node.slug}/>
         </div>
       ))}
+      </div>
+      <Footer/>
+      </div>
     </Layout>
   )
 }
@@ -25,6 +35,11 @@ export const pageQuery = graphql`
         title
         excerpt
         slug
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
       }
     }
   }

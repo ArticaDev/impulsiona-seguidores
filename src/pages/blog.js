@@ -16,6 +16,7 @@ export default function Blog({ data, location }) {
   const [fewPosts, setfewPosts] = useState([...allPosts.slice(0, numMaxPosts)])
   const [loadMore, setLoadMore] = useState(false)
   const [hasMore, setHasMore] = useState(allPosts.length > numMaxPosts)
+  const [searchString, setSearchString] = useState("");
 
   const handleLoadMore = () => {
     setLoadMore(true)
@@ -25,9 +26,7 @@ export default function Blog({ data, location }) {
   useEffect(() => {
     if (loadMore && hasMore) {
       const currentLength = fewPosts.length
-      console.log(currentLength)
       const isMore = currentLength < allPosts.length
-      console.log(isMore)
       const nextResults = isMore
         ? allPosts.slice(currentLength, currentLength + numMaxPosts)
         : []
@@ -41,12 +40,22 @@ export default function Blog({ data, location }) {
     setHasMore(isMore)
   }, [fewPosts, allPosts.length])
 
+  useEffect(() => {
+    if (searchString) {
+        const filtrados = allPosts.filter(post => post.title.toLowerCase().includes(searchString.toLowerCase()))
+        setfewPosts(filtrados)
+    }
+    else {
+        setfewPosts(allPosts)
+    }
+}, [searchString, allPosts]);
+
   return (
     <Layout>
       <div className="bg-grey topo-blog">
       <Header pageUrl={url} />
       <FloatingButtons pageUrl={url} />
-      <SearchBar/>
+      <SearchBar searchString={searchString} setSearchString={setSearchString} />
       <div className="flex flex-col items-center mb-16">
       {fewPosts.map(node => (
         <div key={node.slug}>

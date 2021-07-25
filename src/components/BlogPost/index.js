@@ -15,7 +15,7 @@ const BlogPost = ({ data, location, className }) => {
       <FloatingButtons  pageUrl={url} />
       <div className={className}>
         <div className="container px-6 lg:px-20 mt-8 topo-blog">
-          <img className="container thumbnail" src={post.featuredImage.node.mediaItemUrl}></img>
+          <img alt="thumbnail" className="container thumbnail" src={'//images.weserv.nl/?'+post.featuredImage.node.mediaItemUrl}></img>
 
           <h1 className="text-link text-4xl text-center mb-8 mt-5">
             {post.title}

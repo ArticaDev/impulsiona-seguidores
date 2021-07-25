@@ -38,7 +38,6 @@ export default function Blog({ data, location }) {
   useEffect(() => {
     const isMore = fewPosts.length < currentPosts.length
     setHasMore(isMore)
-    console.log(fewPosts.length)
   }, [fewPosts, currentPosts.length])
 
   useEffect(() => {
@@ -61,20 +60,28 @@ export default function Blog({ data, location }) {
       <div className="bg-grey topo-blog">
       <Header pageUrl={url} />
       <FloatingButtons pageUrl={url} />
-      <SearchBar searchString={searchString} setSearchString={setSearchString} />
-      <div className="flex flex-col items-center mb-16">
-      {fewPosts.map(node => (
-        <div key={node.slug}>
-      <BlogCard postthumb={node.featuredImage.node.mediaItemUrl} className="my-5" posttitle={node.title} posttext={node.excerpt} postlink={node.slug}/>
+      { allPosts.length ? 
+        <div>
+          <SearchBar searchString={searchString} setSearchString={setSearchString} />
+          <div className="flex flex-col items-center mb-16">
+            {fewPosts.map(node => (
+              <div key={node.slug}>
+            <BlogCard postthumb={node.featuredImage.node.mediaItemUrl} className="my-5" posttitle={node.title} posttext={node.excerpt} postlink={node.slug}/>
+              </div>
+            ))}
+            {hasMore ? (
+              <Btn className="-mb-4 mt-4" func={handleLoadMore} texto={"Carregar Mais"} inv={1}/>
+            ) : (
+              <p className="-mb-2 mt-5 ">Os posts acabaram :(</p>
+            )}
+          </div>
         </div>
-      ))}
-      {hasMore ? (
-        <Btn className="-mb-4 mt-4" func={handleLoadMore} texto={"Carregar Mais"} inv={1}/>
-      ) : (
-        <p className="-mb-2 mt-5 ">Os posts acabaram :(</p>
-      )}
-      
-      </div>
+
+        :
+        <div className="flex min-h-screen justify-center ">
+            <p className="text-6xl m-auto"> Ainda não há nada aqui</p>
+        </div>
+      }
       <Footer/>
       </div>
     </Layout>

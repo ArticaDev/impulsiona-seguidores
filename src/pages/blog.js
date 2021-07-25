@@ -10,9 +10,9 @@ import Btn from '../components/Btn'
 
 export default function Blog({ data, location }) {
   const url = location.href ? location.href : '';
-  
   const allPosts = data.allWpPost.nodes
   const numMaxPosts = 4;
+  const [currentPosts, setCurrentPosts] = useState(allPosts)
   const [fewPosts, setfewPosts] = useState([...allPosts.slice(0, numMaxPosts)])
   const [loadMore, setLoadMore] = useState(false)
   const [hasMore, setHasMore] = useState(allPosts.length > numMaxPosts)
@@ -26,27 +26,33 @@ export default function Blog({ data, location }) {
   useEffect(() => {
     if (loadMore && hasMore) {
       const currentLength = fewPosts.length
-      const isMore = currentLength < allPosts.length
+      const isMore = currentLength < currentPosts.length
       const nextResults = isMore
-        ? allPosts.slice(currentLength, currentLength + numMaxPosts)
+        ? currentPosts.slice(currentLength, currentLength + numMaxPosts)
         : []
       setfewPosts([...fewPosts, ...nextResults])
       setLoadMore(false)
     }
-  }, [loadMore, hasMore, allPosts, fewPosts])
+  }, [loadMore, hasMore, currentPosts, fewPosts])
 
   useEffect(() => {
-    const isMore = fewPosts.length < allPosts.length
+    const isMore = fewPosts.length < currentPosts.length
     setHasMore(isMore)
-  }, [fewPosts, allPosts.length])
+    console.log(fewPosts.length)
+  }, [fewPosts, currentPosts.length])
 
   useEffect(() => {
-    if (searchString) {
-        const filtrados = allPosts.filter(post => post.title.toLowerCase().includes(searchString.toLowerCase()))
-        setfewPosts(filtrados)
+
+    const filtrados = allPosts.filter(
+      post => post.title.toLowerCase().includes(searchString.toLowerCase()))
+
+    if(filtrados.length && searchString){
+      setCurrentPosts(filtrados)
+      setfewPosts([...filtrados.slice(0, numMaxPosts)])
     }
-    else {
-        setfewPosts(allPosts)
+    else{
+      setCurrentPosts(allPosts)
+      setfewPosts([...allPosts.slice(0, numMaxPosts)])
     }
 }, [searchString, allPosts]);
 

@@ -8,7 +8,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => (
       <div className="container px-5">
         <div className="card">
           <div className="bg-blue rounded-t-lg w-full h-20 mb-5 flex justify-center items-center">
-            <h2 className="text-white card-title px-4">{posttitle}</h2>
+            <h2 className="text-white m-0 text-center card-title px-4">{posttitle}</h2>
           </div>
           <img alt="thumbnail" className="container max-w-xl mx-auto px-5 mb-4" src={'//images.weserv.nl/?url='+postthumb}></img>
           <div

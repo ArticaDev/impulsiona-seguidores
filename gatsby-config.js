@@ -20,6 +20,13 @@ module.exports = {
               },
             },
         },
+        {
+          resolve: `gatsby-plugin-sharp`,
+          options: {
+            defaults: {},
+            failOnError: true,
+          },
+        },
         `gatsby-plugin-emotion`,
         'gatsby-plugin-postcss',
         {

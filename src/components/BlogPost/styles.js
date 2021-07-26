@@ -30,7 +30,6 @@ const style =  (Component) => styled(Component)`
         margin-bottom: 15px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 60%;
     }
 
     @media screen and (max-width:641px) { 

@@ -58,7 +58,7 @@ const Header = ({ className, pageUrl }) => {
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green"  >Garantia</a>
                                 <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green " >Contato</a>
-                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                <a activeClass="active" href="/blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
                                 </>
                                 }
                         {!(pageUrl.includes("blog")) &&
@@ -116,7 +116,7 @@ const Header = ({ className, pageUrl }) => {
                             <a activeClass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
                             <a activeClass="active" href="/" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" >Garantia</a>
                             <a activeClass="active" href="/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" >Contato</a>
-                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            <a activeClass="active" href="/blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                 </animated.div>
                 

@@ -7,7 +7,7 @@ const sectionWarranty = ({ className }) => {
         <>
             <div className={className}>
                 <section className="h-full w-full bg-blue warranty px-10 lg:px-52" >
-                    <h3 className="titulo text-white block mx-auto pt-6 mb-5">Ainda em<strong className="titulo-strong">&nbsp;dúvida?</strong></h3>
+                    <h3 className="titulo m-0 text-white block mx-auto pt-6 mb-5">Ainda em<strong className="titulo-strong">&nbsp;dúvida?</strong></h3>
                     <img
                         className="flex mx-auto h-48 mb-10"
                         style={{height: "12rem"}}

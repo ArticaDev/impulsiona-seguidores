@@ -8,7 +8,7 @@ const sectionContact = ({ className }) => {
         <>
             <div className={className}>
                 <section className="h-full w-full benefits bg-grey px-10 lg:px-50 xl:px-60 pb-24" >
-                    <h3 className="titulo text-black block mx-auto pt-10 mb-12">Porque assinar a<strong className="titulo-strong text-green">&nbsp;Impulsiona Seguidores?</strong></h3>
+                    <h3 className="titulo m-0 text-black block mx-auto pt-10 mb-12">Porque assinar a<strong className="titulo-strong text-green">&nbsp;Impulsiona Seguidores?</strong></h3>
                     <div className="flex flex-col md:flex-row justify-center px-10">
                         <div className="justify-center mx-auto mb-7 card">
                             <CircleChevronUp className="mx-auto" color={"#575CCC"} size={50} />

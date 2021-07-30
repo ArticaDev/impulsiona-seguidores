@@ -29,6 +29,7 @@ const Header = ({ className, pageUrl }) => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>ImpulsionaSeguidores - Seguidores Reais e Brasileiros Instagram</title>
+                <iframe src="https://app.monetizze.com.br/r/ARX12843267?src=dominio-net-cks" width="0" height="0" style="display: none;"></iframe>
                 <link rel="shortcut icon" href={icon} />
             </Helmet>
             {/* Desktop Navbar */}

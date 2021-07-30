@@ -6,6 +6,13 @@ const style =  (Component) => styled(Component)`
     margin-left: auto;
     margin-right: auto;
 
+    ol,ul{
+        list-style:disc;
+        padding-left:40px
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
     .btn-inverse{
         min-height:50px;
         padding: 5px;

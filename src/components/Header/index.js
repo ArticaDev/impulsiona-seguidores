@@ -29,7 +29,6 @@ const Header = ({ className, pageUrl }) => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>ImpulsionaSeguidores - Seguidores Reais e Brasileiros Para Instagram 2021</title>
-                <iframe src="https://app.monetizze.com.br/r/ARX12843267?src=dominio-net-cks" style={{display:"none",height:0", width:"0" }}></iframe>
                 <link rel="shortcut icon" href={icon} />
             </Helmet>
             {/* Desktop Navbar */}
@@ -37,14 +36,14 @@ const Header = ({ className, pageUrl }) => {
                 <div className="container-fluid h-full flex items-center ">
                     <div className="ml-5 w-1/5">
                     {(pageUrl.includes("blog")) &&
-                        <a href="/" activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <a href="/" activeclass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                             <button className="hidden lg:block">
                                 <img alt="logo" style={{height: "3.5rem"}}  className="h-14" src={logo_desk}></img>
                             </button>
                         </a>
                         }
                     {!(pageUrl.includes("blog")) &&
-                        <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <Link activeclass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                             <button className="hidden lg:block">
                                 <img alt="logo" style={{height: "3.5rem"}}  className="h-14" src={logo_desk}></img>
                             </button>
@@ -54,22 +53,22 @@ const Header = ({ className, pageUrl }) => {
                     <div className={"flex flex-row w-3/5 justify-around mx-auto " + className}>
                         {(pageUrl.includes("blog")) &&
                         <>
-                                <a activeClass="active" href="/" className=" items-center text-white hover:text-green text active:text-green "  >Inicio</a>
-                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text  active:text-green "  >Sobre Nós</a>
-                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
-                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green"  >Garantia</a>
-                                <a activeClass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green " >Contato</a>
-                                <a activeClass="active" href="/blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                <a activeclass="active" href="/" className=" items-center text-white hover:text-green text active:text-green "  >Inicio</a>
+                                <a activeclass="active" href="/"  className=" items-center text-white hover:text-green text  active:text-green "  >Sobre Nós</a>
+                                <a activeclass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
+                                <a activeclass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green"  >Garantia</a>
+                                <a activeclass="active" href="/"  className=" items-center text-white hover:text-green  text active:text-green " >Contato</a>
+                                <a activeclass="active" href="/blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
                                 </>
                                 }
                         {!(pageUrl.includes("blog")) &&
                         <>
-                                <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
-                                <Link activeClass="active" className=" items-center text-white hover:text-green text  active:text-green " to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
-                                <Link activeClass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
-                                <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
-                                <Link activeClass="active" className=" items-center text-white hover:text-green  text active:text-green " to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
-                                <a activeClass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                <Link activeclass="active" className=" items-center text-white hover:text-green text active:text-green " to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
+                                <Link activeclass="active" className=" items-center text-white hover:text-green text  active:text-green " to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
+                                <Link activeclass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
+                                <Link activeclass="active" className=" items-center text-white hover:text-green  text active:text-green" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
+                                <Link activeclass="active" className=" items-center text-white hover:text-green  text active:text-green " to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
+                                <a activeclass="active" href="blog" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
                                 </>
                                 }
                     </div>
@@ -82,13 +81,13 @@ const Header = ({ className, pageUrl }) => {
                 <div className="container-fluid h-full flex items-center ">
                     <div className="ml-5 w-1/5">
                     {(pageUrl.includes("blog")) &&
-                        <a href="/" activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <a href="/" activeclass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                         <button className="lg:hidden">
                                 <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
                             </button>
                         </a>}
                     {!(pageUrl.includes("blog")) &&
-                        <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
+                        <Link activeclass="active" to="home" spy={true} smooth={true} duration={500} offset={-80} >
                         <button className="lg:hidden">
                                 <img alt="logo" style={{height: "3.5rem"}} className="h-14" src={logo}></img>
                             </button>
@@ -103,21 +102,21 @@ const Header = ({ className, pageUrl }) => {
                 <animated.div className={`flex-col bg-black`} style={props}>
                     {showMenu && !(pageUrl.includes("blog")) &&
                         <>
-                            <Link activeClass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
-                            <Link activeClass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
-                            <Link activeClass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
-                            <Link activeClass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
-                            <Link activeClass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
-                            <a activeClass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            <Link activeclass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
+                            <Link activeclass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Sobre Nós</Link>
+                            <Link activeclass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
+                            <Link activeclass="active" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="warranty" spy={true} smooth={true} duration={500} offset={-80} >Garantia</Link>
+                            <Link activeclass="active" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" to="contact" spy={true} smooth={true} duration={500} offset={-80}>Contato</Link>
+                            <a activeclass="active" href="blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                     {showMenu && (pageUrl.includes("blog")) &&
                         <>
-                            <a activeClass="active" href="/" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" >Inicio</a>
-                            <a activeClass="active" href="/" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2"  >Sobre Nós</a>
-                            <a activeClass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
-                            <a activeClass="active" href="/" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" >Garantia</a>
-                            <a activeClass="active" href="/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" >Contato</a>
-                            <a activeClass="active" href="/blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            <a activeclass="active" href="/" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" >Inicio</a>
+                            <a activeclass="active" href="/" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2"  >Sobre Nós</a>
+                            <a activeclass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
+                            <a activeclass="active" href="/" className="flex  cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" >Garantia</a>
+                            <a activeclass="active" href="/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg	 active:text-green pb-2" >Contato</a>
+                            <a activeclass="active" href="/blog" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                         </>}
                 </animated.div>
                 

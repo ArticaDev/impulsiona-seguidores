@@ -19,10 +19,10 @@ const HomeCard = ({ className }) => {
             followersprices: ["55,90", "75,90", "145,90", "279,90"],
             anchorprice:["177","337"],
             links: [
-                "http://mon.net.br/17s8xk",
-                "http://mon.net.br/17s8xl",
-                "http://mon.net.br/17s8xm",
-                "http://mon.net.br/17s8xn",
+                "283",
+                "292",
+                "294",
+                "295",
             ],
         },
         {
@@ -30,10 +30,10 @@ const HomeCard = ({ className }) => {
             likesprices: ["25,90", "45,90", "84,90", "159,90"],
             anchorprice:["107","197"],
             links: [
-                "http://mon.net.br/17s8xv",
-                "http://mon.net.br/17s8xx",
-                "http://mon.net.br/17s8y0",
-                "http://mon.net.br/17s8y1",
+                "300",
+                "301",
+                "302",
+                "304",
             ],
         },
         {
@@ -41,10 +41,10 @@ const HomeCard = ({ className }) => {
             combosprices: ["89,90", "125,90", "249,90", "489,90"],
             anchorprice:["307","587"],
             links: [
-                "http://mon.net.br/17s8y3",
-                "http://mon.net.br/17s8y4",
-                "http://mon.net.br/17s8y5",
-                "http://mon.net.br/17s8y7",
+                "296",
+                "297",
+                "298",
+                "299",
             ],
         },
     ];
@@ -257,7 +257,7 @@ const HomeCard = ({ className }) => {
                         }
                             <div className="flex justify-center items-center flex-col mt-5">
                                     <button
-                                     onClick={() => (window.location.replace(products[products[0].titles.indexOf(chosenTitle)].links[valor.x]))}
+                                     onClick={() => (window.location.replace("https://cliente.impulsionaseguidores.net/pay/is-plans/?aero-add-to-checkout="+products[products[0].titles.indexOf(chosenTitle)].links[valor.x]))}
                                     className="btn text-white mb-5">Contratar</button>
                                 <button
                                     onClick={() => {setTitle(products[0].titles[0]);valor.x=0}}

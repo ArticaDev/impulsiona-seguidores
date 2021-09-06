@@ -99,7 +99,7 @@ const Header = ({ className, pageUrl }) => {
                     {showMenu && !(pageUrl.includes("blog")) &&
                         <>
                             <Link activeclass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
-                            <Link activeclass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="about" spy={true} smooth={true} duration={500} offset={-80} >Como Funciona</Link>
+                            <Link activeclass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="how-it-works" spy={true} smooth={true} duration={500} offset={-80} >Como Funciona</Link>
                             <Link activeclass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
                             <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Login</a>
                         </>}

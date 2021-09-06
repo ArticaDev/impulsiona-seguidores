@@ -14,7 +14,7 @@ const Footer = ({ className }) => (
         <div className="place-self-center lg:m-0 mt-1 mb-3">
           <div className="mb-2">
             <h5 className="text-white text-lg m-0">
-              Impulsiona Seguidores - 2021
+              Impulsiona Seguidores - {new Date().getFullYear()}
             </h5>
           </div>
           <div className="mb-1">

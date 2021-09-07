@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const style = (Component) => styled(Component)`
 
-p {
+.text {
     font-size:16px;
 }
 

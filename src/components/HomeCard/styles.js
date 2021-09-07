@@ -73,7 +73,7 @@ letter-spacing: 0em;
 }
 
 .card-increase{
-    height: 500px;
+    height: 550px;
     transition: 0.5s;
 }
 

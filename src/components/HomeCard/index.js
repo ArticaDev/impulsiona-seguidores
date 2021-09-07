@@ -73,7 +73,7 @@ const HomeCard = ({ className }) => {
                         </h2>
                     </div>
                     <div
-                        className={`flex flex-col items-center mt-12 ${
+                        className={`flex flex-col items-center mt-8 ${
                             actualTitle !== products[0].titles[0] ? "lg:mt-1" : ""
                             }`}
                     >

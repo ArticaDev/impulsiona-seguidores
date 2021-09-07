@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-input-slider";
 import style from "./styles";
-import Advantages from "../Advantages"
 const HomeCard = ({ className }) => {
     
     const [valor, setState] = useState({ x: 0 });
@@ -249,12 +248,6 @@ const HomeCard = ({ className }) => {
                         )}
                         {(actualTitle === products[0].titles[1] || actualTitle === products[0].titles[2] || actualTitle === products[0].titles[3]) && (
                             <>
-                            {(actualTitle === products[0].titles[1] || actualTitle === products[0].titles[3] )&&
-                            <Advantages text={["Seguidores","Brasileiros"]}/>
-                        }
-                            {actualTitle === products[0].titles[2] &&
-                            <Advantages text={["Curtidas","Brasileiras"]}/>
-                        }
                             <div className="flex justify-center items-center flex-col mt-5">
                                     <button
                                      onClick={() => (window.location.replace("https://cliente.impulsionaseguidores.net/pay/is-plans/?aero-add-to-checkout="+products[products[0].titles.indexOf(chosenTitle)].links[valor.x]))}

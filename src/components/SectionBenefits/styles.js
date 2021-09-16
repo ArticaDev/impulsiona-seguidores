@@ -17,15 +17,15 @@ const style = (Component) => styled(Component)`
   }
 
 h3{
-  font-size:26px;
+  font-size:22px;
 }
   p{
-    font-size:20px;
+    font-size:18px;
     padding:10px;
   }
   .card{
       min-width:200px;
-      max-width:400px;
+      max-width:18vw;
   }
 
 `;

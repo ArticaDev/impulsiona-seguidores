@@ -8,9 +8,9 @@ const sectionContact = ({ className }) => {
     return (
         <>
             <div className={className}>
-                <section className="h-full w-full benefits bg-grey lg:px-40 xl:px-50 pb-24" >
+                <section className="h-full w-full benefits bg-grey lg:px-20 xl:px-50 pb-24" >
                     <h3 className="titulo m-0 text-black block  pt-10 mb-12">Porque assinar a<strong className="titulo-strong text-green">&nbsp;Impulsiona Seguidores?</strong></h3>
-                    <div className="grid lg:grid-flow-row grid-flow-col lg:grid-rows-1 lg:grid-cols-4 grid-rows-4 justify-center px-10">
+                    <div className="grid lg:grid-flow-row grid-flow-col lg:grid-rows-1 lg:grid-cols-4 grid-rows-4 justify-items-center px-10">
                         <div className="justify-center lg:mt-0 mb-4 card">
                             <Gear className="mx-auto" color={"#575CCC"} size={iconSize} />
                             <h3 className="text-center"><strong>Suporte Impulsionado</strong></h3>

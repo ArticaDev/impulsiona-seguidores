@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Slider from "react-input-slider";
-
 import CardSlider from "../CardSlider"
 import style from "./styles";
 const HomeCard = ({ className }) => {

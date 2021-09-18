@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Slider from "react-input-slider";
+
+import CardSlider from "../CardSlider"
 import style from "./styles";
 const HomeCard = ({ className }) => {
     
-    const [valor, setState] = useState({ x: 0 });
+    const [valor, setXValue] = useState({ x: 0 });
+
+
     let products = [
         {
             titles: [
@@ -48,6 +52,7 @@ const HomeCard = ({ className }) => {
         },
     ];
 
+  
     let [actualTitle, setTitle] = useState(products[0].titles[0]);
     let [chosenTitle, setchosenTitle] = useState(products[0].titles[0]);
 
@@ -111,29 +116,7 @@ const HomeCard = ({ className }) => {
                                     <h4 className="text-link">
                                         {products[1].followers[valor.x] + " seguidores por mês"}
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
                                     {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">
@@ -157,29 +140,7 @@ const HomeCard = ({ className }) => {
                                     <h4 className="text-link">
                                         {products[2].likes[valor.x] + " curtidas por mês"}
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
                                         {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">
@@ -206,29 +167,7 @@ const HomeCard = ({ className }) => {
                                             products[2].likes[valor.x] +
                                             " curtidas por mês"}
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6">
                                     {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">

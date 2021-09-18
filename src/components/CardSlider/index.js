@@ -1,6 +1,6 @@
 import Slider from "react-input-slider";
 import { keyframes } from "@emotion/react";
-import React, { useState } from "react";
+import React from "react";
 
 const CardSlider = (props) => {
     const pulse = keyframes` {

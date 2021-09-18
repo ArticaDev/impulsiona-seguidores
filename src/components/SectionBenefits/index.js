@@ -1,29 +1,35 @@
 import React from "react";
 import style from "./styles";
-import { CircleChevronUp, EyeSlashed, Money } from 'akar-icons';
+import { Gear, EyeSlashed, Plane, LockOn} from 'akar-icons';
 
 
 const sectionContact = ({ className }) => {
+    const iconSize = 70;
     return (
         <>
             <div className={className}>
-                <section className="h-full w-full benefits bg-grey px-10 lg:px-50 xl:px-60 pb-24" >
-                    <h3 className="titulo m-0 text-black block mx-auto pt-10 mb-12">Porque assinar a<strong className="titulo-strong text-green">&nbsp;Impulsiona Seguidores?</strong></h3>
-                    <div className="flex flex-col md:flex-row justify-center px-10">
-                        <div className="justify-center mx-auto mb-7 card">
-                            <CircleChevronUp className="mx-auto" color={"#575CCC"} size={50} />
-                            <h3 className="text-center"><strong>Alcance</strong></h3>
-                            <p className="mt-3">Alcance mais pessoas para divulgar seu conteúdo e se torne popular na rede do Instagram.</p>
+                <section className="h-full w-full benefits bg-grey lg:px-20 xl:px-50 pb-24" >
+                    <h3 className="titulo m-0 text-black block  pt-10 mb-12">Porque assinar a<strong className="titulo-strong text-green">&nbsp;Impulsiona Seguidores?</strong></h3>
+                    <div className="grid lg:grid-flow-row grid-flow-col lg:grid-rows-1 lg:grid-cols-4 grid-rows-4 justify-items-center px-10">
+                        <div className="justify-center lg:mt-0 mb-4 card">
+                            <Gear className="mx-auto" color={"#575CCC"} size={iconSize} />
+                            <h3 className="text-center"><strong>Suporte Impulsionado</strong></h3>
+                            <p className="mt-3">Estamos dispostos a <strong className="text-link">te ajudar</strong> em todas as suas eventuais dúvidas.</p>
                         </div>
-                        <div className="justify-center mx-auto mb-7 card">
-                            <EyeSlashed className="mx-auto" color={"#575CCC"} size={50} />
+                        <div className="justify-center lg:mt-0 mb-4 card">
+                            <Plane className="mx-auto" color={"#575CCC"} size={iconSize} />
+                            <h3 className="text-center"><strong>Rápido e Prático</strong></h3>
+                            <p className="mt-3">Faça sua compra em menos de<strong className="text-link"> 57 segundos</strong> em nosso sistema 100% seguro.</p>
+                        </div>
+                        <div className="justify-center lg:mt-0 mb-4 card">
+                            <LockOn className="mx-auto" color={"#575CCC"} size={iconSize} />
+                            <h3 className="text-center"><strong>Segurança</strong></h3>
+                            <p className="mt-3">Compre seguidores <strong className="text-link">sem correr</strong> qualquer tipo de <strong className="text-link">risco</strong> de ter sua conta bloqueada.</p>
+                        </div>
+                        <div className="justify-center lg:mt-0  card">
+                            <EyeSlashed className="mx-auto" color={"#575CCC"} size={iconSize} />
                             <h3 className="text-center"><strong>Sigilo</strong></h3>
-                            <p className="mt-3">Nosso processo de entrega de seguidores e curtidas é totalmente sigiloso, nem o Instagram fica sabendo!</p>
-                        </div>
-                        <div className="justify-center mx-auto card">
-                            <Money className="mx-auto" color={"#575CCC"} size={50} />
-                            <h3 className="text-center"><strong>Melhor Custo-Benefício</strong></h3>
-                            <p className="mt-3">Nossos planos possuem o melhor custo e qualidade de seguidores de todas as plataformas disponíveis!</p>
+                            <p className="mt-3">Suas informações são totalmente <strong className="text-link"> confidenciais </strong> ninguém saberá que comprou seguidores.</p>
                         </div>
                     </div>
                 </section>

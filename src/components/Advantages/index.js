@@ -1,133 +1,18 @@
 import React from "react";
 import style from "./styles";
-
-const Advantages = ({ className, text }) => {
+import { LockOn, PeopleMultiple, ArrowCycle, Shield, WhatsappFill, Calendar } from 'akar-icons';
+const Advantages = ({ className }) => {
     return (
-        <>
-            <div className="flex mt-7 mb-2 items-start ">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#00CD00"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    display="block"
-                    id="DoubleCheck"
-                >
-                    <path d="M2 12l5.25 5 2.625-3" />
-                    <path d="M8 12l5.25 5L22 7" />
-                    <path d="M16 7l-3.5 4" />
-                </svg>
-                <p className="text-link ml-2 texto">
-                    {text[0]} <strong className="text-link">Reais</strong> e{" "}
-                    <strong className="text-link">{text[1]}</strong>
-                </p>
+        <div className={className + " flex justify-center"}>
+            <div className="grid grid-flow-row lg:grid-flow-row lg:grid-cols-3 lg:grid-rows-2 place-items-start">
+                <div className="flex items-center m-2 lg:m-5 "><PeopleMultiple className="text-link mr-3" size={24} /><p className="text">Seguidores Reais e Brasileiros</p></div>
+                <div className="flex items-center m-2 lg:m-5 "><LockOn className="text-link mr-3" size={24} /><p className="text">Não precisa informar a senha</p></div>
+                <div className="flex items-center m-2 lg:m-5 "><ArrowCycle  className="text-link mr-3" size={24} /><p className="text">Reposição automática</p></div>
+                <div className="flex items-center m-2 lg:m-5 "><Shield  className="text-link mr-3" size={24} /><p className="text">Seguro e confiável</p></div>
+                <div className="flex items-center m-2 lg:m-5 "><WhatsappFill  className="text-link mr-3" size={24} /><p className="text">Suporte eficiente</p></div>
+                <div className="flex items-center m-2 lg:m-5 "><Calendar  className="text-link mr-3" size={24} /><p className="text">Garantia de 7 dias</p></div>
             </div>
-            <div className="flex mb-2 items-center ">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#00CD00"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    display="block"
-                    id="DoubleCheck"
-                >
-                    <path d="M2 12l5.25 5 2.625-3" />
-                    <path d="M8 12l5.25 5L22 7" />
-                    <path d="M16 7l-3.5 4" />
-                </svg>
-                <p className="text-link ml-2 texto">
-                    Quantidade <strong className="text-link">garantida</strong>{" "}
-                    na assinatura
-                  </p>
-            </div>
-            <div className="flex mb-2 items-center">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#00CD00"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    display="block"
-                    id="DoubleCheck"
-                >
-                    <path d="M2 12l5.25 5 2.625-3" />
-                    <path d="M8 12l5.25 5L22 7" />
-                    <path d="M16 7l-3.5 4" />
-                </svg>
-                <p className="text-link ml-2 texto">
-                    Reposição <strong className="text-link">automática</strong>{" "}
-                    de seguidores
-                  </p>
-            </div>
-            <div className="flex mb-2 items-center">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#00CD00"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    display="block"
-                    id="DoubleCheck"
-                >
-                    <path d="M2 12l5.25 5 2.625-3" />
-                    <path d="M8 12l5.25 5L22 7" />
-                    <path d="M16 7l-3.5 4" />
-                </svg>
-                <p className="text-link ml-2 texto">
-                    Atendimento via{" "}
-                    <strong className="text-link">e-mail</strong> e{" "}
-                    <strong className="text-link">WhatsApp</strong>
-                </p>
-            </div>
-            <div className="flex mb-2 items-center">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#00CD00"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    display="block"
-                    id="DoubleCheck"
-                >
-                    <path d="M2 12l5.25 5 2.625-3" />
-                    <path d="M8 12l5.25 5L22 7" />
-                    <path d="M16 7l-3.5 4" />
-                </svg>
-                <p className="text-link ml-2 texto">
-                    Cancelamento a{" "}
-                    <strong className="text-link">qualquer momento</strong>
-                </p>
-            </div>
-            <div className="flex mb-3 mt-4 items-center">
-                <p className="text-link ml-2 texto">
-                    <strong className="text-pink">Atenção:</strong> Seu{" "}
-                    <strong className="text-pink">perfil</strong> precisa estar{" "}
-                    <strong className="text-pink">público</strong>
-                </p>
-            </div>
-        </>
+        </div>
     );
 };
 

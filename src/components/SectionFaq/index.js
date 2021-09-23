@@ -57,7 +57,7 @@ const SectionFaq = () => {
   };
 
   return (
-    <div className="container lg:px-44 bg-grey">
+    <div className="m-0 lg:px-44 bg-grey">
       <h2 className="text-center m-0 pt-6 mb-6">Perguntas Frequentes</h2>
       <div className="flex lg:flex-row flex-wrap justify-center">
         {faqs.map((faq, index) => (

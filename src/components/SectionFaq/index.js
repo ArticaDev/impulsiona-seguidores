@@ -64,7 +64,7 @@ const SectionFaq = () => {
           <div
             key={index}
             className={`rounded bg-white w-96 mx-2 shadow p-6 mb-2 ${
-              faq.open === true ? "h-auto" : "h-36"
+              faq.open === true ? "h-auto" : "h-28"
             }`}
           >
             <div className="grid grid-flow-col grid-cols-1 grid-rows-1 items-center">

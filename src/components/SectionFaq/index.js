@@ -5,7 +5,7 @@ import { ArrowDown } from "akar-icons";
 const SectionFaq = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "É seguro comprar seguidores com o Impulsiona Seguidores?",
+      question: "É seguro comprar seguidores conosco?",
       answer:
         "Como foi dito anteriormente, nosso sistema não pede por informações pessoais que estejam relacionadas com sua senha do Instagram pois precisamos apenas do seu @usuário para te entregar os seguidores contratados dos planos. Também contamos com sistema que utiliza de criptografia e recursos tecnológicos avançados para processar seu pagamento de forma segura.",
       open: false,

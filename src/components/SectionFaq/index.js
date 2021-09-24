@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Collapse } from "react-collapse";
-import { ArrowDown } from "akar-icons";
+import style from "./styles";
+import Collapse from "@kunukn/react-collapse";
+import { ArrowDown, Cross } from "akar-icons";
 
-const SectionFaq = () => {
+const SectionFaq = ({ className }) => {
   const [faqs, setFaqs] = useState([
     {
       question: "É seguro comprar seguidores conosco?",
@@ -57,35 +58,38 @@ const SectionFaq = () => {
   };
 
   return (
-    <div className="m-0 lg:px-44 bg-grey">
-      <h2 className="text-center m-0 pt-6 mb-8">Perguntas Frequentes</h2>
-      <div className="flex lg:flex-row flex-wrap justify-center">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`rounded bg-white w-96 mx-2 shadow p-6 mb-2 ${
-              faq.open === true ? "h-auto" : "h-28"
-            }`}
-          >
-            <div className="grid grid-flow-col grid-cols-1 grid-rows-1 items-center">
-              <h5 style={{ maxWidth: "280px" }} className="m-0">
-                {faq.question}
-              </h5>
-              <button
-                className=" m-4 justify-self-end border border-link rounded-full"
-                onClick={() => toggleFAQ(index)}
-              >
-                <ArrowDown className="text-link" />
-              </button>
+    <div className={className}>
+      <div className="m-0 lg:px-44 bg-grey">
+        <h2 className="text-center m-0 pt-6 mb-8">Perguntas Frequentes</h2>
+        <div className="flex lg:flex-row flex-wrap justify-center">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`rounded bg-white w-96 mx-2 shadow p-6 mb-2 ${
+                faq.open === true ? "h-auto" : "h-28"
+              }`}
+            >
+              <div className="grid grid-flow-col grid-cols-1 grid-rows-1 items-center">
+                <h5 style={{ maxWidth: "280px" }} className="m-0">
+                  {faq.question}
+                </h5>
+                <button
+                  className=" m-4 justify-self-end border border-link rounded-full"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  {!faq.open && <ArrowDown className="text-link p-1" />}
+                  {faq.open && <Cross className="text-link  p-1" />}
+                </button>
+              </div>
+              <Collapse className="collapse-css-transition" isOpen={faq.open}>
+                {faq.open && <p className="lg:mt-3 mt-2">{faq.answer}</p>}
+              </Collapse>
             </div>
-            <Collapse isOpened={faq.open}>
-              <p className="lg:mt-3 mt-2">{faq.answer}</p>
-            </Collapse>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default SectionFaq;
+export default style(SectionFaq);

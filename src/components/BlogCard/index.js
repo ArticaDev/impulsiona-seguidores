@@ -23,7 +23,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink, numeroP
           <a href={"/blog/"+postlink}>
           <img alt="thumbnail" className="container max-w-xl mx-auto px-5 mb-4" src={'//images.weserv.nl/?url='+postthumb}></img></a>
           <div
-            className="text-lg px-8 text-card"
+            className="text-md px-8 text-card"
             dangerouslySetInnerHTML={{ __html: textSliced }}
           />
           <div className="flex justify-center mt-7">

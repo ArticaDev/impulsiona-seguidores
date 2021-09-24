@@ -14,7 +14,7 @@ import BlogSection from '../components/BlogSection'
 export default function Index({data, location}) {
     const url = location.href ? location.href : '';
     const allPosts = data.allWpPost.nodes
-    const fewPosts = [...allPosts.slice(0, 3)]
+    const fewPosts = [...allPosts.slice(-3)]
     return (
         <Layout>
             <Header pageUrl={url} />

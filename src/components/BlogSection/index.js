@@ -5,6 +5,7 @@ const BlogSection = (props) => {
   const posts = props.fewPosts.map((node) => (
     <div key={node.slug}>
       <BlogCard
+        numeroPalavras={24}
         postthumb={node.featuredImage.node.mediaItemUrl}
         className="my-5"
         posttitle={node.title}

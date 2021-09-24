@@ -2,13 +2,13 @@ import React from "react";
 import style from "./styles";
 import { Link } from "gatsby";
 
-const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => {
+const BlogCard = ({ className, posttitle, posttext, postthumb, postlink, numeroPalavras }) => {
 
   function splitString(str, no_words) {
     return str.split(" ").splice(0,no_words).join(" ");
   }
 
-  let textSliced = splitString(posttext,42);
+  let textSliced = splitString(posttext,numeroPalavras);
   textSliced = textSliced + '...'
 
   return(

@@ -27,7 +27,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink, numeroP
             dangerouslySetInnerHTML={{ __html: textSliced }}
           />
           <div className="flex justify-center mt-7">
-            <Link to={postlink}>
+            <Link to={"/blog/"+postlink}>
               <button className="btn text-white mb-5">Leia Mais</button>
             </Link>
           </div>

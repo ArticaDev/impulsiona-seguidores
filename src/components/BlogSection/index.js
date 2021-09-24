@@ -10,7 +10,7 @@ const BlogSection = (props) => {
         className="my-5"
         posttitle={node.title}
         posttext={node.excerpt}
-        postlink={"/blog/" + node.slug}
+        postlink={node.slug}
       />
     </div>
   ));

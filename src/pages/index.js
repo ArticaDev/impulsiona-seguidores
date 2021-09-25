@@ -10,6 +10,7 @@ import SectionBenefits from '../components/SectionBenefits'
 import SectionHome from '../components/SectionHome'
 import FloatingButtons from '../components/FloatingButtons'
 import BlogSection from '../components/BlogSection'
+import SectionFaq from '../components/SectionFaq'
 
 export default function Index({data, location}) {
     const url = location.href ? location.href : '';
@@ -23,6 +24,7 @@ export default function Index({data, location}) {
             <SectionAbout />
             <SectionBenefits />
             <SectionWarranty />
+            <SectionFaq />
             <SectionContact />
             <BlogSection fewPosts={fewPosts} />
             <Footer />

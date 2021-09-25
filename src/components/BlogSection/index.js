@@ -17,7 +17,7 @@ const BlogSection = (props) => {
   return (
     <div className="bg-grey lg:px-52">
       <h3 className="text-center m-0 mb-6 text-link">
-        Veja nossos posts mais recentes!
+        Quer saber mais? <br></br>Veja nossos posts mais recentes!
       </h3>
       <div className="grid grid-flow-col grid-rows-3 lg:grid-flow-row lg:grid-cols-3 lg:grid-rows-1 pb-4">
         {posts}

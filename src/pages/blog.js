@@ -66,7 +66,7 @@ export default function Blog({ data, location }) {
           <div className="flex flex-col items-center mb-16">
             {fewPosts.map(node => (
               <div key={node.slug}>
-            <BlogCard postthumb={node.featuredImage.node.mediaItemUrl} className="my-5" posttitle={node.title} posttext={node.excerpt} postlink={node.slug}/>
+            <BlogCard numeroPalavras={42} postthumb={node.featuredImage.node.mediaItemUrl} className="my-5" posttitle={node.title} posttext={node.excerpt} postlink={node.slug}/>
               </div>
             ))}
             {hasMore ? (

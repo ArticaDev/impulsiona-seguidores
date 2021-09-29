@@ -3,6 +3,7 @@ import style from "./styles";
 import logo from "../../images/logo_desk.png";
 import CardContainer from "../../components/CardContainer";
 import HomeCard from "../../components/HomeCard";
+import Advantages from "../Advantages"
 
 
 const sectionHome = ({ className }) => {
@@ -18,6 +19,7 @@ const sectionHome = ({ className }) => {
                     ></img>
                     <h3 className="titulo text-black block m-0 mx-auto pt-6 mb-5">Seguidores<strong className="titulo-strong text-green">&nbsp;Reais</strong> e<strong className="titulo-strong text-green">&nbsp;Brasileiros</strong></h3>
                     <HomeCard />
+                    <Advantages text={["Seguidores e curtidas","Brasileiros"]}/>
                     <p className="text-black mt-10 mb-10">Assine a <strong className="text-green">IMPULSIONA SEGUIDORES</strong> e turbine seu perfil do Instagram de forma fácil e garantida, com pessoas reais te seguindo e, o melhor de tudo: <strong className="text-green">sem perder o engajamento da rede</strong></p>
                     <CardContainer />
 

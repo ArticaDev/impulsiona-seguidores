@@ -2,13 +2,13 @@ import React from "react";
 import style from "./styles";
 import { Link } from "gatsby";
 
-const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => {
+const BlogCard = ({ className, posttitle, posttext, postthumb, postlink, numeroPalavras }) => {
 
   function splitString(str, no_words) {
     return str.split(" ").splice(0,no_words).join(" ");
   }
 
-  let textSliced = splitString(posttext,42);
+  let textSliced = splitString(posttext,numeroPalavras);
   textSliced = textSliced + '...'
 
   return(
@@ -23,11 +23,11 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink }) => {
           <a href={"/blog/"+postlink}>
           <img alt="thumbnail" className="container max-w-xl mx-auto px-5 mb-4" src={'//images.weserv.nl/?url='+postthumb}></img></a>
           <div
-            className="text-lg px-8 text-card"
+            className="text-md px-8 text-card"
             dangerouslySetInnerHTML={{ __html: textSliced }}
           />
           <div className="flex justify-center mt-7">
-            <Link to={postlink}>
+            <Link to={"/blog/"+postlink}>
               <button className="btn text-white mb-5">Leia Mais</button>
             </Link>
           </div>

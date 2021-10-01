@@ -42,6 +42,7 @@ const TestimonialsCards = () => {
       <div
         className="bg-white w-80 rounded-md shadow p-4 h-96 mb-4 mx-2"
         key={index}
+        style={{width:"300px"}}
       >
         <ReactStars
           count={testimonial.rating}
@@ -51,13 +52,13 @@ const TestimonialsCards = () => {
         />
 
         <h6 className="text-sm opacity-60 m-0">{testimonial.person}</h6>
-        <h5 className="text-link m-0 my-2 text-lg">
+        <h5 style={{minHeight:"56px"}} className="text-link m-0 my-1 text-lg">
           {testimonial.recommendationTitle}
         </h5>
-        <p className="text-sm h-48 mb-2 mt-4">
+        <p className="text-sm mb-2 mt-2" style={{minHeight:"200px"}}>
           {testimonial.recommendationText}
         </p>
-        <h5 className="text-sm m-0 text-pink text-center border-b rounded p-4">
+        <h5 className="text-sm m-0 text-pink text-center border-b rounded p-1">
           {testimonial.chosenPlan}
         </h5>
       </div>
@@ -65,7 +66,7 @@ const TestimonialsCards = () => {
   });
 
   return (
-    <div className="bg-grey xl:px-20">
+    <div className="bg-grey px-2 lg:px-0 xl:px-14 2xl:px-24 ">
       <h3 className="m-0 pt-5 text-center pb-9">
         Veja como é a experiência de comprar seguidores na{" "}
         <strong className="text-green">Impulsiona Seguidores</strong>

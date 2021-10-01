@@ -65,12 +65,12 @@ const TestimonialsCards = () => {
   });
 
   return (
-    <div className="bg-grey px-20">
+    <div className="bg-grey xl:px-20">
       <h3 className="m-0 pt-5 text-center pb-9">
         Veja como é a experiência de comprar seguidores na{" "}
         <strong className="text-green">Impulsiona Seguidores</strong>
       </h3>
-      <div className=" grid lg:grid-flow-col-dense justify-center place-items-center">
+      <div className=" grid lg:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1 xl:grid-flow-col-dense justify-center place-items-center">
         {cards}
       </div>
     </div>

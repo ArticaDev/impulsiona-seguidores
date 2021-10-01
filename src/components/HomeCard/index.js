@@ -112,7 +112,10 @@ const HomeCard = ({ className }) => {
                             <>
                                 <div className="flex flex-col justify-center items-center">
                                     <h4 className="text-link">
-                                        {products[1].followers[valor.x] + " seguidores por mês"}
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[1].followers[valor.x]}
+                                    </strong>
+                                        &nbsp;seguidores por mês
                                     </h4>
                                     <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
@@ -135,8 +138,11 @@ const HomeCard = ({ className }) => {
                         {actualTitle === products[0].titles[2] && (
                             <div>
                                 <div className="flex flex-col justify-center items-center">
-                                    <h4 className="text-link">
-                                        {products[2].likes[valor.x] + " curtidas por mês"}
+                                <h4 className="text-link">
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[2].likes[valor.x]}
+                                    </strong>
+                                        &nbsp;curtidas por mês
                                     </h4>
                                     <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
@@ -159,11 +165,11 @@ const HomeCard = ({ className }) => {
                         {actualTitle === products[0].titles[3] && (
                             <>
                                 <div className="flex flex-col justify-center items-center">
-                                    <h4 className="text-link text-center px-5">
-                                        {products[1].followers[valor.x] +
-                                            " seguidores e " +
-                                            products[2].likes[valor.x] +
-                                            " curtidas por mês"}
+                                <h4 className="text-link">
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[3].combos[valor.x]}
+                                    </strong>
+                                        &nbsp;seguidores e curtidas por mês
                                     </h4>
                                     <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6">

@@ -2,8 +2,26 @@ import React, { useState, useEffect } from "react";
 import style from "./styles";
 import { WhatsappFill, ChevronUp } from "akar-icons";
 import { Link } from "react-scroll";
+import { useStaticQuery, graphql } from "gatsby"
+
 
 const FloatingButtons = ({ className, pageUrl }) => {
+  const data = useStaticQuery(graphql`
+  query {
+      allWpPagina {
+        edges {
+          node {
+            id
+            camposDaPaginaInicial{
+              emailParaContato
+              numeroParaContato
+            }
+          }
+        }
+      }
+    }    
+  `)
+
   let [initialClass, setInitialClass] = useState("hidden");
   useEffect(() => {
     window.onscroll = () => {
@@ -24,7 +42,7 @@ const FloatingButtons = ({ className, pageUrl }) => {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://api.whatsapp.com/send?phone=5534996634683&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20site%20Impulsiona%20Seguidores!"
+                href={`https://api.whatsapp.com/send?phone=${data.allWpPagina.edges[0].node.camposDaPaginaInicial.numeroParaContato}&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20site%20Impulsiona%20Seguidores!`}
               >
                 <WhatsappFill
                   className="mr-16 rounded-full bg-white"

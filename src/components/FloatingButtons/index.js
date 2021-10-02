@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 const FloatingButtons = ({ className, pageUrl }) => {
+
   const data = useStaticQuery(graphql`
   query {
       allWpPagina {
@@ -13,14 +14,13 @@ const FloatingButtons = ({ className, pageUrl }) => {
           node {
             id
             camposDaPaginaInicial{
-              emailParaContato
               numeroParaContato
             }
           }
         }
       }
     }    
-  `)
+`)
 
   let [initialClass, setInitialClass] = useState("hidden");
   useEffect(() => {

@@ -15,7 +15,7 @@ const BlogSection = (props) => {
     </div>
   ));
   return (
-    <div className="bg-grey lg:px-52">
+    <div className="bg-grey xl:px-52">
       <h3 className="text-center m-0 mb-6 text-link">
         Quer saber mais? <br></br>Veja nossos posts mais recentes!
       </h3>

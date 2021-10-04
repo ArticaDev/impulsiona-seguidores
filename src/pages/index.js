@@ -11,6 +11,7 @@ import SectionHome from "../components/SectionHome";
 import FloatingButtons from "../components/FloatingButtons";
 import BlogSection from "../components/BlogSection";
 import SectionFaq from "../components/SectionFaq";
+import SectionStep from "../components/SectionStep";
 import TestimonialsVideos from "../components/TestimonialsVideos";
 import TestimonialsCards from "../components/TestimonialsCards";
 
@@ -22,6 +23,7 @@ export default function Index({ data, location }) {
       <Header pageUrl={url} />
       <FloatingButtons pageUrl={url} />
       <SectionHome />
+      <SectionStep/>
       <SectionAbout />
       <SectionBenefits />
       <TestimonialsVideos />

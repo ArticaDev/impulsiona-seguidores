@@ -30,12 +30,12 @@ const SectionStep = () => {
   ];
 
   return (
-    <section className="bg-grey py-6 lg:px-52">
+    <section className="bg-grey py-6 xl:px-44">
       <h2 className="text-center m-0 pb-8 pt-4 px-2">
         <strong className="text-green">Como comprar</strong> seguidores no
         Instagram
       </h2>
-      <div className="grid grid-flow-row-dense xl:grid-flow-col-dense items-center place-items-center">
+      <div className="grid grid-flow-row-dense xl:grid-flow-col-dense items-center justify-center place-items-center max-w-screen-2xl place-self-center">
         {steps.map((step, index) => {
           return (
             <>

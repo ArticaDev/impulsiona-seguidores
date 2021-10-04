@@ -12,6 +12,8 @@ import FloatingButtons from "../components/FloatingButtons";
 import BlogSection from "../components/BlogSection";
 import SectionFaq from "../components/SectionFaq";
 import SectionStep from "../components/SectionStep";
+import TestimonialsVideos from "../components/TestimonialsVideos";
+import TestimonialsCards from "../components/TestimonialsCards";
 
 export default function Index({ data, location }) {
   const url = location.href ? location.href : "";
@@ -24,7 +26,9 @@ export default function Index({ data, location }) {
       <SectionStep/>
       <SectionAbout />
       <SectionBenefits />
+      <TestimonialsVideos />
       <SectionWarranty />
+      <TestimonialsCards/>
       <SectionFaq />
       <SectionContact />
       <BlogSection fewPosts={fewPosts} />

@@ -2,11 +2,11 @@ import React from "react";
 import style from "./styles";
 import CountUp from "react-countup";
 
-const ClientCard = ({ className, number, name, desc, duration }) => {
+const ClientCard = ({ className, number, name, desc, duration, key }) => {
     let numero = Number(number);
     return (
         <>
-            <div className={className}>
+            <div key={key} className={className}>
                 <div  className="card-border flex justify-center items-center mb-9 lg:mx-4">
                     <div className="card-body-internal">
                         <div className="flex justify-center mb-4">

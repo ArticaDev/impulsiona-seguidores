@@ -14,6 +14,7 @@ import SectionFaq from "../components/SectionFaq";
 import SectionStep from "../components/SectionStep";
 import TestimonialsVideos from "../components/TestimonialsVideos";
 import TestimonialsCards from "../components/TestimonialsCards";
+import Cta from "../components/Cta";
 
 export default function Index({ data, location }) {
   const url = location.href ? location.href : "";
@@ -26,10 +27,13 @@ export default function Index({ data, location }) {
       <SectionStep/>
       <SectionAbout />
       <SectionBenefits />
+      <Cta frasePrincipal={"Gostou dos benefícios? Clique abaixo!"} fraseBtn={"Quero impulsionar minha página agora!"}/>
       <TestimonialsVideos />
+      <Cta frasePrincipal={"E aí? Vamos fazer como eles e impulsionar?"} fraseBtn={"Eu também quero!"}/>
       <SectionWarranty />
       <TestimonialsCards/>
       <SectionFaq />
+      <Cta frasePrincipal={"Agora que você não tem mais dúvidas, vamos impulsionar?"} fraseBtn={"Quero impulsionar!"}/>
       <SectionContact />
       <BlogSection fewPosts={fewPosts} />
       <Footer />

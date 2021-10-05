@@ -33,7 +33,7 @@ export default function Index({ data, location }) {
       <SectionWarranty />
       <TestimonialsCards/>
       <SectionFaq />
-      <Cta frasePrincipal={"Agora que você não tem mais dúvidas, vamos impulsionar?"} fraseBtn={"Quero impulsionar!"}/>
+      <Cta frasePrincipal={"Agora que você não tem mais dúvidas, vamos impulsionar?"} fraseBtn={"Vamos impulsionar!"}/>
       <SectionContact />
       <BlogSection fewPosts={fewPosts} />
       <Footer />

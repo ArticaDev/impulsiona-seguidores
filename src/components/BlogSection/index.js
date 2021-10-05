@@ -19,7 +19,7 @@ const BlogSection = (props) => {
       <h3 className="text-center m-0 mb-6 text-link">
         Quer saber mais? <br></br>Veja nossos posts mais recentes!
       </h3>
-      <div className="grid grid-flow-col grid-rows-3 lg:grid-flow-row lg:grid-cols-3 lg:grid-rows-1 pb-4">
+      <div className="grid grid-flow-col grid-rows-3 lg:grid-flow-row lg:grid-cols-3 lg:grid-rows-1 pb-4 place-items-center">
         {posts}
       </div>
     </div>

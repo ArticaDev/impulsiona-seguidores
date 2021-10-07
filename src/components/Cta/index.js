@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 const Cta = (props) => {
     return (
-        <div className="lg:px-52 bg-blue flex flex-col items-center my-5">
+        <div className="lg:px-52 bg-blue flex flex-col items-center">
             <h3 className="text-center text-white">{props.frasePrincipal}</h3>
               <Link
                 to="home"

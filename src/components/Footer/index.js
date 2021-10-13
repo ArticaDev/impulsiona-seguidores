@@ -17,14 +17,14 @@ const Footer = ({ className }) => (
               Impulsiona Seguidores - {new Date().getFullYear()}
             </h5>
           </div>
-          <div className="mb-1">
+          {/* <div className="mb-1">
             <a href="/" className="text-white">
               Política de Privacidade&nbsp;|&nbsp;
             </a>
             <a href="/" className="text-white">
               Termos de Uso
             </a>
-          </div>
+          </div> */}
           <div>
             <p className="text-center text-white text-lg">
               Desenvolvido por&nbsp;

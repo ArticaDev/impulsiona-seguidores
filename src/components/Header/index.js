@@ -65,7 +65,7 @@ const Header = ({ className, pageUrl }) => {
                                 <Link activeclass="active" className=" items-center text-white hover:text-green text active:text-green " to="home" spy={true} smooth={true} duration={500} offset={-80} >Inicio</Link>
                                 <Link activeclass="active" className=" items-center text-white hover:text-green text  active:text-green " to="how-it-works" spy={true} smooth={true} duration={500} offset={-80} >Como Funciona</Link>
                                 <Link activeclass="active" className=" items-center text-white hover:text-green text active:text-green " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
-                                <a activeclass="active" href="https://www.impulsionaseguidores.net/blog/" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
+                                <a activeclass="active" href="/blog/" className="flex items-center text-white hover:text-green  text active:text-green">Blog</a>
                                 <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex items-center text-white hover:text-green  text active:text-green border rounded px-2">Login</a>
                                 </>
                                 }
@@ -103,7 +103,7 @@ const Header = ({ className, pageUrl }) => {
                             <Link activeclass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Inicio</Link>
                             <Link activeclass="active" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2" to="how-it-works" spy={true} smooth={true} duration={500} offset={-80} >Como Funciona</Link>
                             <Link activeclass="active" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " to="benefits" spy={true} smooth={true} duration={500} offset={-80} >Benefícios</Link>
-                            <a activeclass="active" href="https://www.impulsionaseguidores.net/blog/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
+                            <a activeclass="active" href="/blog/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green pb-2">Blog</a>
                             <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg active:text-green  pb-2">Login</a>
                         </>}
                     {showMenu && (pageUrl.includes("blog")) &&
@@ -111,7 +111,7 @@ const Header = ({ className, pageUrl }) => {
                             <a activeclass="active" href="/" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" >Inicio</a>
                             <a activeclass="active" href="/" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2"  >Como funciona</a>
                             <a activeclass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
-                            <Link activeclass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Blog</Link>
+                            <a activeclass="active" href="/blog/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Blog</a>
                             <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg  active:text-green pb-2" >Login</a>
                         </>}
                 </animated.div>

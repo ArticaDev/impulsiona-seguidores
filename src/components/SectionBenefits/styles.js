@@ -20,10 +20,12 @@ h3{
   font-size:22px;
 }
   p{
-    font-size:20px;
+    font-size:18px;
+    padding:10px;
   }
   .card{
-      width:250px;
+      min-width:200px;
+      max-width:18vw;
   }
 
 `;

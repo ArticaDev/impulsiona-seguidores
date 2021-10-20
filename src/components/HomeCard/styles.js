@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const style = (Component) => styled(Component)`
 
 .card{
-    height: 400px;
+    height: 350px;
 width: 300px;
 background: #FFFFFF;
 border-radius: 11px;
@@ -73,13 +73,13 @@ letter-spacing: 0em;
 }
 
 .card-increase{
-    height: 100%;
+    height: 550px;
     transition: 0.5s;
 }
 
 @media (min-width:768px){
     .card-increase{
-    height:100%;
+    height:500px;
     width:620px;
     transition:0.5s;}
 }

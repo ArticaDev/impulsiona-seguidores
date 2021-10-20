@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Slider from "react-input-slider";
+import CardSlider from "../CardSlider"
 import style from "./styles";
-import Advantages from "../Advantages"
 const HomeCard = ({ className }) => {
     
-    const [valor, setState] = useState({ x: 0 });
+    const [valor, setXValue] = useState({ x: 0 });
+
+
     let products = [
         {
             titles: [
@@ -49,6 +50,7 @@ const HomeCard = ({ className }) => {
         },
     ];
 
+  
     let [actualTitle, setTitle] = useState(products[0].titles[0]);
     let [chosenTitle, setchosenTitle] = useState(products[0].titles[0]);
 
@@ -74,7 +76,7 @@ const HomeCard = ({ className }) => {
                         </h2>
                     </div>
                     <div
-                        className={`flex flex-col items-center mt-12 ${
+                        className={`flex flex-col items-center mt-8 ${
                             actualTitle !== products[0].titles[0] ? "lg:mt-1" : ""
                             }`}
                     >
@@ -110,31 +112,12 @@ const HomeCard = ({ className }) => {
                             <>
                                 <div className="flex flex-col justify-center items-center">
                                     <h4 className="text-link">
-                                        {products[1].followers[valor.x] + " seguidores por mês"}
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[1].followers[valor.x]}
+                                    </strong>
+                                        &nbsp;seguidores por mês
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
                                     {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">
@@ -155,32 +138,13 @@ const HomeCard = ({ className }) => {
                         {actualTitle === products[0].titles[2] && (
                             <div>
                                 <div className="flex flex-col justify-center items-center">
-                                    <h4 className="text-link">
-                                        {products[2].likes[valor.x] + " curtidas por mês"}
+                                <h4 className="text-link">
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[2].likes[valor.x]}
+                                    </strong>
+                                        &nbsp;curtidas por mês
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6 lg:ml-6">
                                         {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">
@@ -201,35 +165,13 @@ const HomeCard = ({ className }) => {
                         {actualTitle === products[0].titles[3] && (
                             <>
                                 <div className="flex flex-col justify-center items-center">
-                                    <h4 className="text-link text-center px-5">
-                                        {products[1].followers[valor.x] +
-                                            " seguidores e " +
-                                            products[2].likes[valor.x] +
-                                            " curtidas por mês"}
+                                <h4 className="text-link">
+                                   <strong className="text-white bg-blue rounded px-1 py-0.5">
+                                       {products[3].combos[valor.x]}
+                                    </strong>
+                                        &nbsp;seguidores e curtidas por mês
                                     </h4>
-                                    <Slider
-                                        className="mt-10"
-                                        axis="x"
-                                        xstep={1}
-                                        xmin={0}
-                                        xmax={3}
-                                        x={valor.x}
-                                        styles={{
-                                            track: {
-                                                backgroundColor: "#ECECEC",
-                                            },
-                                            active: {
-                                                backgroundColor: "#F2295B",
-                                            },
-                                            thumb: {
-                                                width: 25,
-                                                height: 25,
-                                                opacity: 1,
-                                                background: "#F2295B",
-                                            },
-                                        }}
-                                        onChange={({ x }) => setState((valor) => ({ ...valor, x }))}
-                                    />
+                                    <CardSlider valor={valor} setXValue={setXValue}/>
                                     <div className="flex flex-row mt-6">
                                     {(valor.x === 2 || valor.x === 3) &&
                                         <div className="flex">
@@ -249,12 +191,6 @@ const HomeCard = ({ className }) => {
                         )}
                         {(actualTitle === products[0].titles[1] || actualTitle === products[0].titles[2] || actualTitle === products[0].titles[3]) && (
                             <>
-                            {(actualTitle === products[0].titles[1] || actualTitle === products[0].titles[3] )&&
-                            <Advantages text={["Seguidores","Brasileiros"]}/>
-                        }
-                            {actualTitle === products[0].titles[2] &&
-                            <Advantages text={["Curtidas","Brasileiras"]}/>
-                        }
                             <div className="flex justify-center items-center flex-col mt-5">
                                     <button
                                      onClick={() => (window.location.replace("https://cliente.impulsionaseguidores.net/pay/is-plans/?aero-add-to-checkout="+products[products[0].titles.indexOf(chosenTitle)].links[valor.x]))}

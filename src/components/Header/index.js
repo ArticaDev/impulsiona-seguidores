@@ -111,7 +111,7 @@ const Header = ({ className, pageUrl }) => {
                             <a activeclass="active" href="/" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" >Inicio</a>
                             <a activeclass="active" href="/" className="flex cursor-pointer  justify-center items-center text-white hover:text-green text-lg	 active:text-green mb-2"  >Como funciona</a>
                             <a activeclass="active" href="/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Benefícios</a>
-                            <Link activeclass="active" className="flex cursor-pointer justify-center items-center text-white hover:text-green text-lg active:text-green mb-2" to="home" spy={true} smooth={true} offset={-80} duration={500} >Blog</Link>
+                            <a activeclass="active" href="/blog/" className="flex cursor-pointer   justify-center items-center text-white hover:text-green text-lg	active:text-green mb-2 " >Blog</a>
                             <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex cursor-pointer  justify-center  items-center text-white hover:text-green text-lg  active:text-green pb-2" >Login</a>
                         </>}
                 </animated.div>

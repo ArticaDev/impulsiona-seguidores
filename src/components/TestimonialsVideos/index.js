@@ -4,7 +4,7 @@ import LazyLoad from "react-lazyload";
 
 const TestimonialsVideos = () => {
   return (
-    <div className="bg-grey xl:px-52 my-2">
+    <div className="bg-grey xl:px-52 my-2 pt-6">
       <h3 className="text-center m-0 pb-12 px-4">Veja também alguns depoimentos de quem <strong className="text-green">comprou e adorou!</strong></h3>
       <LazyLoad
         once /*if set to true, the performance goes up a bit, but this is better for the user.*/

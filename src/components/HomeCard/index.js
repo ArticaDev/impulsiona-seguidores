@@ -165,7 +165,7 @@ const HomeCard = ({ className }) => {
                         {actualTitle === products[0].titles[3] && (
                             <>
                                 <div className="flex flex-col justify-center items-center">
-                                <h4 className="text-link">
+                                <h4 className="text-link px-8 text-center">
                                    <strong className="text-white bg-blue rounded px-1 py-0.5">
                                        {products[3].combos[valor.x]}
                                     </strong>

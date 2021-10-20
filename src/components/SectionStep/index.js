@@ -30,7 +30,7 @@ const SectionStep = () => {
   ];
 
   return (
-    <section className="bg-grey py-6 xl:px-44">
+    <section className="bg-grey py-6 xl:px-44 how-it-works">
       <h2 className="text-center m-0 pb-8 pt-4 px-2">
         <strong className="text-green">Como comprar</strong> seguidores no
         Instagram

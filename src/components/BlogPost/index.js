@@ -4,7 +4,7 @@ import style from "./styles";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { graphql } from "gatsby";
-import FloatingButtons from '../../components/FloatingButtons'
+import FloatingButtons from "../../components/FloatingButtons";
 
 const BlogPost = ({ data, location, className }) => {
   const url = location.href ? location.href : "";
@@ -12,10 +12,16 @@ const BlogPost = ({ data, location, className }) => {
   return (
     <Layout>
       <Header pageUrl={url} />
-      <FloatingButtons  pageUrl={url} />
+      <FloatingButtons pageUrl={url} />
       <div className={className}>
         <div className="container px-6 lg:px-20 mt-8 topo-blog">
-          <img alt="thumbnail" className="container thumbnail" src={'//images.weserv.nl/?url='+post.featuredImage.node.mediaItemUrl}></img>
+          <img
+            alt="thumbnail"
+            className="container thumbnail"
+            src={
+              "//images.weserv.nl/?url=" + post.featuredImage.node.mediaItemUrl
+            }
+          ></img>
 
           <h1 className="text-link text-5xl text-center mb-8 mt-5">
             {post.title}

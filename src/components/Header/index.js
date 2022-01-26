@@ -56,7 +56,7 @@ const Header = ({ className, pageUrl }) => {
                                 <a activeclass="active" href="/" className=" items-center text-white hover:text-green text active:text-green "  >Inicio</a>
                                 <a activeclass="active" href="/"  className=" items-center text-white hover:text-green text  active:text-green "  >Como Funciona</a>
                                 <a activeclass="active" href="/"  className=" items-center text-white hover:text-green text active:text-green "  >Benefícios</a>
-                                <Link activeclass="active" className=" items-center text-white hover:text-green text active:text-green " to="topo-blog" spy={true} smooth={true} duration={500} offset={-80} >Blog</Link>
+                                <a activeclass="active" className=" items-center text-white hover:text-green text active:text-green " href="/blog/" spy={true} smooth={true} duration={500} offset={-80} >Blog</a>
                                 <a activeclass="active" href="https://cliente.impulsionaseguidores.net/" className="flex items-center text-white hover:text-green  text active:text-green border rounded px-2">Login</a>
                                 </>
                                 }

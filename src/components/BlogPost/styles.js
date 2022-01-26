@@ -1,10 +1,17 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-const style =  (Component) => styled(Component)`
+const style = (Component) => styled(Component)`
     width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    a {
+        color:#575CCC;
+        text-decoration: underline;
+    }
+
+
 
     ol,ul{
         list-style:disc;

@@ -29,6 +29,7 @@ const Header = ({ className, pageUrl }) => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>ImpulsionaSeguidores - Seguidores Reais e Brasileiros Para Instagram 2021</title>
+                <script async defer data-website-id="63515bf8-d4b1-4732-9dab-46c41cecddcf" src="https://analytics.articadev.com/umami.js"></script>
                 <link rel="shortcut icon" href={icon} />
             </Helmet>
             {/* Desktop Navbar */}

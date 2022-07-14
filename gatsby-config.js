@@ -26,7 +26,7 @@ module.exports = {
         {
             resolve: `gatsby-source-wordpress`,
             options: {
-              url: `http://impulsionacms.articadev.com/graphql`,
+              url: `https://impulsionacms.tk/graphql`,
             },
             includedRoutes: [
                 "**/paginas"

@@ -21,7 +21,7 @@ const BlogCard = ({ className, posttitle, posttext, postthumb, postlink, numeroP
             <h2 className="text-white m-0 text-center card-title px-4">{posttitle}</h2></a>
           </div>
           <a href={"/blog/"+postlink}>
-          <img alt="thumbnail" className="container max-w-xl mx-auto px-5 mb-4" src={'//images.weserv.nl/?url='+postthumb}></img></a>
+          <img alt="thumbnail" className="container max-w-xl mx-auto px-5 mb-4" src={postthumb}></img></a>
           <div
             className="text-md px-8 text-card"
             dangerouslySetInnerHTML={{ __html: textSliced }}

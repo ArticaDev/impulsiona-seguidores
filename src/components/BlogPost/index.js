@@ -19,7 +19,7 @@ const BlogPost = ({ data, location, className }) => {
             alt="thumbnail"
             className="container thumbnail"
             src={
-              "//images.weserv.nl/?url=" + post.featuredImage.node.mediaItemUrl
+              post.featuredImage.node.mediaItemUrl
             }
           ></img>
 
